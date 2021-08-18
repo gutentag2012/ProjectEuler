@@ -3,7 +3,8 @@ const main = async () => {
 	for (let index = 1; index <= solutions; index++) {
 		var s = index + ""
 		while (s.length < 3) s = "0" + s
-		const program = await import(`./problem${s}/index.js`)
+		console.log(`\n\nPROGRAM ${s}\n`)
+		await import(`./problem${s}.js`)
 	}
 }
 main()
